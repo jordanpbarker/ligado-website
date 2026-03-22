@@ -140,4 +140,4 @@ At $499/mo with the average customer using ~500 voice minutes, ~200 SMS conversa
 
 Even at heavy usage (1,000 voice minutes), margins stay above 70%. The voice minutes are the only cost that moves the needle — chat and SMS are essentially free. The website is a one-time build cost amortized over the subscription.
 
-**Recommendation:** Go with Option B (1,000 minutes included) for launch. It's generous, easy to pitch, and protects margins. You can always move to unlimited later once you have real usage data.
+**Decision:** Option B — 1,000 voice minutes included, $0.25/min overage. Chat and SMS are unlimited. This is what's live on the site.
