@@ -107,7 +107,8 @@ export const PRICING = {
   comparison: 'Less than $3/hour for a 24/7 receptionist.',
   features: [
     'All four products (Chat, SMS, Voice, Website)',
-    'Unlimited conversations',
+    '1,000 voice minutes included',
+    'Unlimited chat & SMS conversations',
     'Custom AI brain trained on your business',
     'Instant lead alerts (SMS + email)',
     'Full conversation transcripts',
@@ -117,7 +118,7 @@ export const PRICING = {
     'Trade-specific AI knowledge',
     'Professional website built for your business',
   ],
-  noFees: 'No setup fees. No per-message fees. No contracts.',
+  noFees: 'No setup fees. No contracts. $0.25/min after 1,000 minutes.',
 };
 
 export const FAQ_ITEMS = [
@@ -151,7 +152,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'Are there per-message or per-call fees?',
-    answer: 'No. $499/month covers everything — unlimited conversations across all three channels. No surprises on your bill.',
+    answer: 'Your plan includes 1,000 voice minutes per month — more than enough for most small businesses. Chat and SMS are unlimited. If you go over 1,000 voice minutes, it\'s just $0.25 per additional minute. No hidden fees.',
   },
 ];
 
