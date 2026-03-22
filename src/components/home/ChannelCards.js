@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { CHANNELS } from '@/lib/constants';
-import { IconChat, IconMobile, IconPhone } from '@/components/ui/Icons';
+import { IconChat, IconMobile, IconPhone, IconGlobe } from '@/components/ui/Icons';
 import SectionContainer from '@/components/ui/SectionContainer';
 import SectionHeading from '@/components/ui/SectionHeading';
 
@@ -12,15 +12,16 @@ const icons = {
   chat: IconChat,
   sms: IconMobile,
   voice: IconPhone,
+  globe: IconGlobe,
 };
 
 export default function ChannelCards() {
   return (
     <SectionContainer dark id="channels">
       <SectionHeading
-        badge="One AI Brain, Three Channels"
+        badge="One Plan, Everything Included"
         title="Every Way Customers Reach You — Covered"
-        subtitle="Chat, text, or call — your AI receptionist handles it all with the same knowledge of your business."
+        subtitle="Chat, text, call, and even your website — all handled by one AI brain trained on your business."
         dark
       />
 
@@ -29,7 +30,7 @@ export default function ChannelCards() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="grid md:grid-cols-3 gap-6 lg:gap-8"
+        className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
       >
         {CHANNELS.map((channel) => {
           const Icon = icons[channel.icon];

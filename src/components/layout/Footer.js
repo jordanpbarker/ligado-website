@@ -28,7 +28,7 @@ export default function Footer() {
               <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
                 <span className="text-navy-950 font-bold text-sm">L</span>
               </div>
-              <span className="text-white font-bold text-xl">Ligado</span>
+              <span className="text-white font-bold text-xl">Ligado <span className="text-accent">AI</span></span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               AI-powered communication for home service businesses. Never miss a lead again.

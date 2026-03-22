@@ -6,6 +6,7 @@ export const NAV_LINKS = [
       { label: 'AI Chat Widget', href: '/ai-chat-widget', description: 'Convert website visitors 24/7' },
       { label: 'AI Text/SMS', href: '/ai-text-sms', description: 'Instant intelligent text replies' },
       { label: 'AI Voice/Phone', href: '/ai-voice-phone', description: 'Never miss a call again' },
+      { label: 'Pro Website', href: '/websites', description: 'A website built for your trade' },
     ],
   },
   { label: 'Pricing', href: '/pricing' },
@@ -15,7 +16,7 @@ export const NAV_LINKS = [
 export const HERO = {
   badge: 'AI Receptionist for Home Service Pros',
   headline: 'Stop Losing Jobs to the Guy Who Answers First.',
-  subheadline: 'Ligado AI handles your calls, texts, and website chats — 24/7. One AI brain trained on your business. Every lead captured. Every customer impressed.',
+  subheadline: 'Ligado AI handles your calls, texts, website chats, and even builds your website — 24/7. One AI brain trained on your business. Every lead captured. Every customer impressed.',
   cta1: 'Book a Demo',
   cta2: 'See How It Works',
 };
@@ -38,6 +39,12 @@ export const CHANNELS = [
     slug: '/ai-voice-phone',
     description: 'AI answers every call with a natural voice. Full transcripts, emergency detection, appointment booking.',
     icon: 'voice',
+  },
+  {
+    name: 'Pro Website',
+    slug: '/websites',
+    description: 'Don\'t have a website? We\'ll build you a professional, mobile-friendly site — included in your plan.',
+    icon: 'globe',
   },
 ];
 
@@ -99,7 +106,7 @@ export const PRICING = {
   tagline: 'Everything you need. One simple price.',
   comparison: 'Less than $3/hour for a 24/7 receptionist.',
   features: [
-    'All three channels (Chat, SMS, Voice)',
+    'All four products (Chat, SMS, Voice, Website)',
     'Unlimited conversations',
     'Custom AI brain trained on your business',
     'Instant lead alerts (SMS + email)',
@@ -108,6 +115,7 @@ export const PRICING = {
     'Appointment booking integration',
     'After-hours coverage',
     'Trade-specific AI knowledge',
+    'Professional website built for your business',
   ],
   noFees: 'No setup fees. No per-message fees. No contracts.',
 };
@@ -256,6 +264,28 @@ export const VOICE_PAGE = {
     { title: 'Professional Impression', description: 'AI sounds like a knowledgeable team member. Great first impression for your business.' },
     { title: 'Overflow or Always-On', description: 'Set it to answer only missed calls, or handle everything. Your choice.' },
     { title: 'Appointment Booking', description: 'AI checks your calendar and books appointments during the call.' },
+  ],
+};
+
+// Website feature page content
+export const WEBSITE_PAGE = {
+  badge: 'Pro Website',
+  headline: 'No Website? We\'ll Build One For You.',
+  subheadline: 'A professional, mobile-friendly website designed for your trade — built by us, hosted by us, maintained by us. Included in your Ligado AI plan.',
+  howItWorks: [
+    { step: 1, title: 'Tell Us About Your Business', description: 'A quick form or 10-minute call. We\'ll ask about your services, service area, and what makes you stand out.' },
+    { step: 2, title: 'We Design & Build Everything', description: 'Custom layout, professional copy, mobile-friendly design. We handle it all — you don\'t lift a finger.' },
+    { step: 3, title: 'Your Site Goes Live', description: 'Live in under a week. Your AI chat widget is already embedded, ready to capture leads from day one.' },
+    { step: 4, title: 'We Maintain It Forever', description: 'Need to update your services or add new photos? Just ask. Unlimited edits included.' },
+    { step: 5, title: 'Customers Find You on Google', description: 'Built with SEO basics so you actually show up when homeowners search for your services.' },
+  ],
+  sellingPoints: [
+    { title: 'Zero Upfront Cost', description: 'No $5,000 web design invoice. Your website is included in your Ligado AI plan.' },
+    { title: 'Live in Under a Week', description: 'We move fast. Most sites are designed, built, and live within 5-7 business days.' },
+    { title: 'We Write Everything', description: 'Don\'t know what to put on your site? We write all the content for you based on your business.' },
+    { title: 'Mobile-First Design', description: 'Looks great on the phones your customers are using to find you. Touch-friendly, fast-loading.' },
+    { title: 'Unlimited Edits', description: 'New service? Updated hours? Just text or email us and we\'ll update your site. No extra charge.' },
+    { title: 'AI Chat Built In', description: 'Your Ligado AI chat widget is embedded from day one — converting visitors into leads 24/7.' },
   ],
 };
 

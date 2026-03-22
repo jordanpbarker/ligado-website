@@ -85,7 +85,7 @@ export default function Hero() {
           >
             {[
               { value: '24/7', label: 'Coverage' },
-              { value: '3', label: 'Channels' },
+              { value: '4', label: 'Products' },
               { value: '<30s', label: 'Lead Alerts' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
