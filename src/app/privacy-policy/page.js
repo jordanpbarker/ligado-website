@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">1. Introduction</h2>
             <p>
-              Ligato AI, operated by J Bone Investments LLC ("we," "us," or "our"), provides AI-powered communication
+              Ligato AI, operated by J Bone Investments LLC (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), provides AI-powered communication
               services for home service businesses. This Privacy Policy explains how we collect, use, disclose, and
               safeguard your information when you visit our website or use our services.
             </p>
@@ -82,9 +82,9 @@ export default function PrivacyPolicyPage() {
               You may revoke your consent and opt out of communications at any time by:
             </p>
             <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>Replying "STOP" to any text message to immediately stop all SMS communications</li>
-              <li>Replying "HELP" to any text message for support information</li>
-              <li>Clicking the "unsubscribe" link in any email</li>
+              <li>Replying &ldquo;STOP&rdquo; to any text message to immediately stop all SMS communications</li>
+              <li>Replying &ldquo;HELP&rdquo; to any text message for support information</li>
+              <li>Clicking the &ldquo;unsubscribe&rdquo; link in any email</li>
               <li>Contacting us directly at the information provided below</li>
             </ul>
             <p className="mt-3">
@@ -167,7 +167,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-3">10. Children's Privacy</h2>
+            <h2 className="text-xl font-semibold text-white mb-3">10. Children&apos;s Privacy</h2>
             <p>
               Our services are not directed to individuals under the age of 18. We do not knowingly collect
               personal information from children. If we become aware that we have collected personal information
@@ -188,7 +188,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-xl font-semibold text-white mb-3">12. Changes to This Policy</h2>
             <p>
               We may update this Privacy Policy from time to time. We will notify you of any material changes by
-              posting the updated policy on this page with a revised "Last updated" date. Your continued use of
+              posting the updated policy on this page with a revised &ldquo;Last updated&rdquo; date. Your continued use of
               our services after any changes constitutes your acceptance of the updated policy.
             </p>
           </section>

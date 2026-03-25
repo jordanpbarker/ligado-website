@@ -14,8 +14,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">1. Introduction</h2>
             <p>
-              These Terms &amp; Conditions ("Terms") govern your use of the Ligato AI platform and services
-              operated by J Bone Investments LLC ("we," "us," or "our"). By accessing our website or using our
+              These Terms &amp; Conditions (&ldquo;Terms&rdquo;) govern your use of the Ligato AI platform and services
+              operated by J Bone Investments LLC (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By accessing our website or using our
               services, you agree to be bound by these Terms. If you do not agree, please do not use our services.
             </p>
           </section>
@@ -109,7 +109,7 @@ export default function TermsPage() {
             <h2 className="text-xl font-semibold text-white mb-3">5. Fees and Payment</h2>
             <p>
               Our services are offered on a month-to-month subscription basis. Current pricing is available on
-              our pricing page. We reserve the right to change pricing with 30 days' notice. All fees are
+              our pricing page. We reserve the right to change pricing with 30 days&apos; notice. All fees are
               non-refundable except as required by law. Failure to pay may result in suspension or termination
               of services.
             </p>
@@ -166,7 +166,7 @@ export default function TermsPage() {
             <h2 className="text-xl font-semibold text-white mb-3">10. Indemnification</h2>
             <p>
               You agree to indemnify and hold harmless J Bone Investments LLC, its officers, directors, employees,
-              and agents from any claims, damages, losses, or expenses (including reasonable attorneys' fees)
+              and agents from any claims, damages, losses, or expenses (including reasonable attorneys&apos; fees)
               arising out of your use of our services, your violation of these Terms, or your violation of any
               rights of a third party.
             </p>
@@ -185,7 +185,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">12. Disclaimer of Warranties</h2>
             <p>
-              Our services are provided "as is" and "as available" without warranties of any kind, either express
+              Our services are provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo; without warranties of any kind, either express
               or implied, including but not limited to implied warranties of merchantability, fitness for a
               particular purpose, and non-infringement. We do not warrant that our services will be uninterrupted,
               error-free, or completely secure.
@@ -205,7 +205,7 @@ export default function TermsPage() {
             <h2 className="text-xl font-semibold text-white mb-3">14. Changes to These Terms</h2>
             <p>
               We reserve the right to update these Terms at any time. We will notify you of material changes by
-              posting the updated Terms on this page with a revised "Last updated" date. Your continued use of
+              posting the updated Terms on this page with a revised &ldquo;Last updated&rdquo; date. Your continued use of
               our services after changes are posted constitutes acceptance of the revised Terms.
             </p>
           </section>
