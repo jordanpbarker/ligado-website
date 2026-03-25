@@ -57,9 +57,14 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} Ligado AI. All rights reserved.
-          </p>
+          <div className="text-center sm:text-left">
+            <p className="text-gray-500 text-sm">
+              &copy; {new Date().getFullYear()} Ligado AI. All rights reserved.
+            </p>
+            <p className="text-gray-600 text-xs mt-1">
+              Ligado AI is a J Bone Investments LLC company.
+            </p>
+          </div>
           <p className="text-gray-600 text-xs">
             Built by Boots & Pixels
           </p>
