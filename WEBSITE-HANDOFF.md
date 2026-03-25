@@ -1,13 +1,13 @@
-# Ligado AI — Website Handoff
+# Ligato AI — Website Handoff
 
 **Domain:** getligado.com
-**Purpose:** Marketing site for Ligado AI — an AI-powered communication assistant for home service businesses. The site sells the product directly to business owners (plumbers, HVAC techs, electricians, landscapers, roofers, painters, general contractors).
+**Purpose:** Marketing site for Ligato AI — an AI-powered communication assistant for home service businesses. The site sells the product directly to business owners (plumbers, HVAC techs, electricians, landscapers, roofers, painters, general contractors).
 
 ---
 
 ## Product Overview
 
-Ligado AI is an AI receptionist that handles all inbound customer communication for home service businesses. One AI "brain" is trained on each business and handles three channels:
+Ligato AI is an AI receptionist that handles all inbound customer communication for home service businesses. One AI "brain" is trained on each business and handles three channels:
 
 1. **AI Chat Widget** — embeddable on the business's website
 2. **AI Text/SMS** — responds to inbound texts on a dedicated business number
@@ -50,7 +50,7 @@ Each component should have its own dedicated page with feature details, use case
 - AI collects name + phone naturally → owner gets an SMS/email alert within 30 seconds
 - If visitor wants to book → AI shows available slots → books it on the spot
 
-**Demo opportunity:** An actual working chat widget could be embedded on the Ligado website itself as a live demo. The widget is a self-contained JS file that can be dropped onto any page.
+**Demo opportunity:** An actual working chat widget could be embedded on the Ligato website itself as a live demo. The widget is a self-contained JS file that can be dropped onto any page.
 
 ---
 
@@ -173,7 +173,7 @@ These features should be highlighted on the main landing page or a features over
 - "I'm working until 7pm but customers are searching at 9pm"
 - "I hate voicemail — nobody leaves messages anymore, they just call the next guy"
 
-**Key message:** Ligado AI is the first employee every solo operator can actually afford. $499/month for a receptionist that works 24/7, never calls in sick, and handles chat, text, and phone — all trained on your specific business.
+**Key message:** Ligato AI is the first employee every solo operator can actually afford. $499/month for a receptionist that works 24/7, never calls in sick, and handles chat, text, and phone — all trained on your specific business.
 
 ---
 
@@ -197,7 +197,7 @@ No setup fees. No per-message fees. No contracts (month-to-month).
 ## Technical Details for Website Implementation
 
 ### Live Chat Widget Demo
-The Ligado chat widget can be embedded on the marketing site as a live demo. It's a single JavaScript file:
+The Ligato chat widget can be embedded on the marketing site as a live demo. It's a single JavaScript file:
 
 ```html
 <script src="https://[app-domain]/widget.js?id=DEMO_BUSINESS_ID"></script>
@@ -209,7 +209,7 @@ The widget is self-contained (React bundled in), renders in a fixed-position con
 
 **Chat flow:**
 1. Script tag loads widget on business's website
-2. Visitor types a message → POST to Ligado API
+2. Visitor types a message → POST to Ligato API
 3. API routes message to Claude AI with the business's custom system prompt
 4. AI responds with business-specific knowledge
 5. As conversation progresses, AI naturally asks for name + phone
@@ -219,13 +219,13 @@ The widget is self-contained (React bundled in), renders in a fixed-position con
 **SMS flow:**
 1. Business gets a dedicated local phone number
 2. Customer texts that number
-3. Twilio webhook hits Ligado API
+3. Twilio webhook hits Ligato API
 4. Same AI brain responds via the same Claude system prompt
 5. Reply sent back through Twilio as an SMS
 6. Owner can take over the conversation manually at any time
 
 **Voice flow:**
-1. Calls route to Ligado via Twilio → Vapi.ai
+1. Calls route to Ligato via Twilio → Vapi.ai
 2. Vapi runs Claude as the AI brain with the business's system prompt
 3. AI has a natural voice conversation (OpenAI TTS voice)
 4. After the call ends, full transcript is logged
@@ -260,7 +260,7 @@ The widget is self-contained (React bundled in), renders in a fixed-position con
 - **Phone screen mockup** — SMS conversation between customer and AI
 - **Call visualization** — animated waveform or phone ringing → AI answering → transcript appearing
 - **Alert notification** — mockup of the owner's phone receiving an SMS alert
-- **Before/After** — "Without Ligado: missed call → lost lead" vs. "With Ligado: AI answers → lead captured → owner alerted"
+- **Before/After** — "Without Ligato: missed call → lost lead" vs. "With Ligato: AI answers → lead captured → owner alerted"
 - **3-channel diagram** — visual showing chat, SMS, and voice all feeding into one AI brain → one dashboard
 
 ### Tone:

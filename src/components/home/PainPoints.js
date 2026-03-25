@@ -16,7 +16,7 @@ export default function PainPoints() {
       />
 
       <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-        {/* Without Ligado */}
+        {/* Without Ligato */}
         <motion.div
           variants={slideInLeft}
           initial="hidden"
@@ -26,7 +26,7 @@ export default function PainPoints() {
         >
           <h3 className="text-lg font-semibold text-gray-400 mb-6 flex items-center gap-2">
             <IconXCircle className="w-5 h-5 text-red-400" />
-            Without Ligado
+            Without Ligato
           </h3>
           <motion.ul
             variants={staggerContainer}
@@ -44,7 +44,7 @@ export default function PainPoints() {
           </motion.ul>
         </motion.div>
 
-        {/* With Ligado */}
+        {/* With Ligato */}
         <motion.div
           variants={slideInRight}
           initial="hidden"
@@ -54,7 +54,7 @@ export default function PainPoints() {
         >
           <h3 className="text-lg font-semibold text-accent mb-6 flex items-center gap-2">
             <IconCheckCircle className="w-5 h-5 text-accent" />
-            With Ligado
+            With Ligato
           </h3>
           <motion.ul
             variants={staggerContainer}

@@ -1,4 +1,4 @@
-# Ligado AI — Cost Structure & Pricing Analysis
+# Ligato AI — Cost Structure & Pricing Analysis
 
 **Date:** March 2026
 **Price Point:** $499/month (all-inclusive)
@@ -91,7 +91,7 @@
 | Slang.ai | $399–599/mo | Unlimited | Per-location (restaurants) |
 | Ruby (human) | $235–1,640/mo | 50–500 min | Per-minute (live humans) |
 
-**Key takeaway:** Most competitors charge $49–199/mo for **voice only**. Ligado at $499 includes voice + SMS + chat + website — the bundle justifies the premium pricing. No competitor bundles all four.
+**Key takeaway:** Most competitors charge $49–199/mo for **voice only**. Ligato at $499 includes voice + SMS + chat + website — the bundle justifies the premium pricing. No competitor bundles all four.
 
 ---
 

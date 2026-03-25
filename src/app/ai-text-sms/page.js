@@ -6,7 +6,7 @@ import SellingPoints from '@/components/features/SellingPoints';
 import FinalCTA from '@/components/home/FinalCTA';
 
 export const metadata = {
-  title: 'AI Text/SMS — Ligado AI',
+  title: 'AI Text/SMS — Ligato AI',
   description: 'Every text gets an instant, intelligent reply. AI-powered SMS for home service businesses.',
 };
 

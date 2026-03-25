@@ -6,7 +6,7 @@ import SellingPoints from '@/components/features/SellingPoints';
 import FinalCTA from '@/components/home/FinalCTA';
 
 export const metadata = {
-  title: 'AI Chat Widget — Ligado AI',
+  title: 'AI Chat Widget — Ligato AI',
   description: 'Turn website visitors into booked jobs with an AI chat assistant that knows your business. Converts leads 24/7.',
 };
 

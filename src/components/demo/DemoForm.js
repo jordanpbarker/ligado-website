@@ -52,7 +52,7 @@ export default function DemoForm() {
               Get Started
             </span>
             <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
-              See Ligado AI in Action
+              See Ligato AI in Action
             </h1>
             <p className="mt-4 text-lg text-gray-400 leading-relaxed">
               Book a free demo and see how your AI receptionist handles calls, texts, and chats — trained on your specific business.

@@ -22,7 +22,7 @@ export default function AboutPage() {
             className="max-w-3xl"
           >
             <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-accent/10 text-accent mb-4">
-              About Ligado
+              About Ligato
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
               {ABOUT_CONTENT.headline}
