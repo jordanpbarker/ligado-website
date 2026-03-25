@@ -22,7 +22,7 @@ export default function FinalCTA() {
             Ready to Never Miss a Lead Again?
           </h2>
           <p className="mt-4 text-lg text-gray-400 max-w-xl mx-auto">
-            See how Ligato AI can handle your calls, texts, and chats — all trained on your specific business.
+            See how Ligato AI can handle your calls, texts, and chats. All trained on your specific business.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button href="/book-a-demo" size="lg">

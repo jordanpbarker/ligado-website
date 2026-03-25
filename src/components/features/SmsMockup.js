@@ -128,7 +128,7 @@ export default function SmsMockup() {
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-navy-950">New SMS Lead</div>
-                  <div className="text-xs text-gray-500 mt-0.5">Mike S. — Sprinkler repair in Murray — via SMS</div>
+                  <div className="text-xs text-gray-500 mt-0.5">Mike S. · Sprinkler repair in Murray · via SMS</div>
                 </div>
               </motion.div>
             )}

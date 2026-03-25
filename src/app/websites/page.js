@@ -6,8 +6,8 @@ import SellingPoints from '@/components/features/SellingPoints';
 import FinalCTA from '@/components/home/FinalCTA';
 
 export const metadata = {
-  title: 'Pro Website — Ligato AI',
-  description: 'Don\'t have a website? We\'ll build a professional, mobile-friendly site for your trade business — included in your Ligato AI plan.',
+  title: 'Pro Website | Ligato AI',
+  description: 'Don\'t have a website? We\'ll build a professional, mobile-friendly site for your trade business, included in your Ligato AI plan.',
 };
 
 export default function WebsitesPage() {

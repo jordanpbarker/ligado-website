@@ -11,7 +11,7 @@ export default function HowItWorks({ steps }) {
       <SectionHeading
         badge="How It Works"
         title="Up and Running in No Time"
-        subtitle="From setup to your first captured lead — here's the flow."
+        subtitle="From setup to your first captured lead. Here's the flow."
       />
 
       <motion.div

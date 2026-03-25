@@ -95,10 +95,10 @@ export default function VoiceMockup() {
                 {isActive ? (
                   <span className="flex items-center justify-center gap-2">
                     <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                    Call in progress — {formatTime(callDuration)}
+                    Call in progress · {formatTime(callDuration)}
                   </span>
                 ) : hasStarted ? (
-                  `Call ended — ${formatTime(callDuration)}`
+                  `Call ended · ${formatTime(callDuration)}`
                 ) : (
                   'Incoming call...'
                 )}
@@ -158,7 +158,7 @@ export default function VoiceMockup() {
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-navy-950">Call Summary</div>
-                  <div className="text-xs text-gray-500 mt-0.5">Water heater issue — No hot water — Appointment requested for ASAP</div>
+                  <div className="text-xs text-gray-500 mt-0.5">Water heater issue · No hot water · Appointment requested for ASAP</div>
                 </div>
               </motion.div>
             )}

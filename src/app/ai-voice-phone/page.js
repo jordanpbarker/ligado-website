@@ -6,7 +6,7 @@ import SellingPoints from '@/components/features/SellingPoints';
 import FinalCTA from '@/components/home/FinalCTA';
 
 export const metadata = {
-  title: 'AI Voice/Phone — Ligato AI',
+  title: 'AI Voice/Phone | Ligato AI',
   description: 'Never miss a call again. AI answers with a natural voice, books appointments, and sends you full transcripts.',
 };
 

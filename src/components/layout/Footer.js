@@ -12,8 +12,8 @@ const footerLinks = {
     { label: 'Book a Demo', href: '/book-a-demo' },
   ],
   Legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Terms & Conditions', href: '/terms' },
   ],
 };
 

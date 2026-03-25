@@ -20,8 +20,8 @@ export default function ChannelCards() {
     <SectionContainer dark id="channels">
       <SectionHeading
         badge="One Plan, Everything Included"
-        title="Every Way Customers Reach You — Covered"
-        subtitle="Chat, text, call, and even your website — all handled by one AI brain trained on your business."
+        title="Every Way Customers Reach You. Covered."
+        subtitle="Chat, text, call, and even your website. All handled by one AI brain trained on your business."
         dark
       />
 

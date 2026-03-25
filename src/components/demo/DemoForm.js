@@ -55,7 +55,7 @@ export default function DemoForm() {
               See Ligato AI in Action
             </h1>
             <p className="mt-4 text-lg text-gray-400 leading-relaxed">
-              Book a free demo and see how your AI receptionist handles calls, texts, and chats — trained on your specific business.
+              Book a free demo and see how your AI receptionist handles calls, texts, and chats, trained on your specific business.
             </p>
 
             <div className="mt-10 space-y-6">

@@ -16,7 +16,7 @@ export const NAV_LINKS = [
 export const HERO = {
   badge: 'AI Receptionist for Home Service Pros',
   headline: 'Stop Losing Jobs to the Guy Who Answers First.',
-  subheadline: 'Ligato AI handles your calls, texts, website chats, and even builds your website — 24/7. One AI brain trained on your business. Every lead captured. Every customer impressed.',
+  subheadline: 'Ligato AI handles your calls, texts, website chats, and even builds your website. 24/7. One AI brain trained on your business. Every lead captured. Every customer impressed.',
   cta1: 'Book a Demo',
   cta2: 'See How It Works',
 };
@@ -43,27 +43,27 @@ export const CHANNELS = [
   {
     name: 'Pro Website',
     slug: '/websites',
-    description: 'Don\'t have a website? We\'ll build you a professional, mobile-friendly site — included in your plan.',
+    description: 'Don\'t have a website? We\'ll build you a professional, mobile-friendly site, included in your plan.',
     icon: 'globe',
   },
 ];
 
 export const PAIN_POINTS = {
   without: [
-    'Miss calls while on a job — lose the lead',
+    'Miss calls while on a job, lose the lead',
     'Can\'t afford a full-time receptionist',
     'Contact forms sit unread for hours',
     'Competitors answer the phone first and win the job',
     'Customers search at 9pm but you\'re done at 7pm',
-    'Nobody leaves voicemails — they just call the next guy',
+    'Nobody leaves voicemails. They just call the next guy',
   ],
   with: [
     'AI answers every call, text, and chat instantly',
-    '$499/mo — fraction of a receptionist\'s salary',
+    '$499/mo. A fraction of a receptionist\'s salary',
     'Leads captured and alerts sent in 30 seconds',
     'First to respond, every single time',
-    '24/7 coverage — nights, weekends, holidays',
-    'No voicemail needed — AI handles the full conversation',
+    '24/7 coverage: nights, weekends, holidays',
+    'No voicemail needed. AI handles the full conversation',
   ],
 };
 
@@ -75,7 +75,7 @@ export const CROSS_FEATURES = [
   },
   {
     title: 'AI Brain Training',
-    description: 'Custom-trained on your business — services, hours, area, pricing, and FAQs. No coding required.',
+    description: 'Custom-trained on your business: services, hours, area, pricing, and FAQs. No coding required.',
     icon: 'brain',
   },
   {
@@ -132,7 +132,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'What trades do you support?',
-    answer: 'Plumbers, HVAC techs, electricians, landscapers, roofers, painters, general contractors, pest control, cleaning services, handyman services — and more. Our AI has trade-specific knowledge built in.',
+    answer: 'Plumbers, HVAC techs, electricians, landscapers, roofers, painters, general contractors, pest control, cleaning services, handyman services, and more. Our AI has trade-specific knowledge built in.',
   },
   {
     question: 'How does the AI learn my business?',
@@ -152,7 +152,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'Are there per-message or per-call fees?',
-    answer: 'Your plan includes 1,000 voice minutes per month — more than enough for most small businesses. Chat and SMS are unlimited. If you go over 1,000 voice minutes, it\'s just $0.25 per additional minute. No hidden fees.',
+    answer: 'Your plan includes 1,000 voice minutes per month, more than enough for most small businesses. Chat and SMS are unlimited. If you go over 1,000 voice minutes, it\'s just $0.25 per additional minute. No hidden fees.',
   },
 ];
 
@@ -186,7 +186,7 @@ export const SMS_CONVERSATION = [
   { role: 'customer', text: "Hey, do you guys do sprinkler repair?", delay: 0 },
   { role: 'ai', text: "Hi there! Yes, we do! Green Valley Landscaping handles all types of sprinkler and irrigation repair. What seems to be the issue?", delay: 2000 },
   { role: 'customer', text: "Got a zone that won't turn on. Probably a valve issue", delay: 4500 },
-  { role: 'ai', text: "Sounds like it could be a solenoid or valve issue — we see that a lot. We can have someone out to diagnose and repair it. Want to set up an appointment?", delay: 6500 },
+  { role: 'ai', text: "Sounds like it could be a solenoid or valve issue. We see that a lot. We can have someone out to diagnose and repair it. Want to set up an appointment?", delay: 6500 },
   { role: 'customer', text: "Yeah that'd be great. This is Mike S btw", delay: 9000 },
   { role: 'ai', text: "Thanks Mike! We have availability tomorrow afternoon or Wednesday morning. What works best?", delay: 11000 },
 ];
@@ -197,19 +197,19 @@ export const VOICE_TRANSCRIPT = [
   { speaker: 'Caller', text: "Hi, yeah, I've got a water heater that's not producing hot water anymore.", time: '0:06' },
   { speaker: 'AI', text: "I'm sorry to hear that! Is it a tank or tankless water heater, do you know?", time: '0:10' },
   { speaker: 'Caller', text: "It's a tank, about 8 years old.", time: '0:14' },
-  { speaker: 'AI', text: "Got it. An 8-year-old tank unit — could be the heating element or thermostat. We can send a technician to diagnose it. Would you like to schedule a visit?", time: '0:17' },
+  { speaker: 'AI', text: "Got it. An 8-year-old tank unit, could be the heating element or thermostat. We can send a technician to diagnose it. Would you like to schedule a visit?", time: '0:17' },
   { speaker: 'Caller', text: "Yeah, as soon as possible. We've got no hot water.", time: '0:24' },
-  { speaker: 'AI', text: "I understand — let me check for the earliest slot. We have an opening tomorrow morning at 8am. Can I book that for you?", time: '0:28' },
+  { speaker: 'AI', text: "Totally understand. Let me check for the earliest slot. We have an opening tomorrow morning at 8am. Can I book that for you?", time: '0:28' },
 ];
 
 // Chat widget feature page content
 export const CHAT_WIDGET_PAGE = {
   badge: 'AI Chat Widget',
   headline: 'Turn Website Visitors Into Booked Jobs',
-  subheadline: 'An AI chat assistant that lives on your website, knows your business, and converts visitors into leads 24/7 — even at 2am.',
+  subheadline: 'An AI chat assistant that lives on your website, knows your business, and converts visitors into leads 24/7. Even at 2am.',
   howItWorks: [
     { step: 1, title: 'Widget Loads', description: 'A single script tag adds the chat widget to your website. Customizable colors match your brand.' },
-    { step: 2, title: 'AI Greets Visitors', description: 'After 8 seconds of browsing, a friendly greeting pops up — like a team member saying hello.' },
+    { step: 2, title: 'AI Greets Visitors', description: 'After 8 seconds of browsing, a friendly greeting pops up. Like a team member saying hello.' },
     { step: 3, title: 'Natural Conversation', description: 'Visitors ask questions and get real answers about your services, hours, and pricing. No generic chatbot nonsense.' },
     { step: 4, title: 'Lead Captured', description: 'AI naturally collects name and phone number through conversation. You get an SMS/email alert within 30 seconds.' },
     { step: 5, title: 'Appointment Booked', description: 'If the visitor wants to book, the AI checks your real calendar and books the appointment on the spot.' },
@@ -228,12 +228,12 @@ export const CHAT_WIDGET_PAGE = {
 export const SMS_PAGE = {
   badge: 'AI Text/SMS',
   headline: 'Every Text Gets an Instant, Intelligent Reply',
-  subheadline: 'A dedicated business number powered by AI. Customers text, get smart answers in seconds, and you capture every lead — automatically.',
+  subheadline: 'A dedicated business number powered by AI. Customers text, get smart answers in seconds, and you capture every lead. Automatically.',
   howItWorks: [
-    { step: 1, title: 'Customer Sees Your Number', description: 'On your truck wrap, yard sign, business card, or Google listing — wherever you display your number.' },
+    { step: 1, title: 'Customer Sees Your Number', description: 'On your truck wrap, yard sign, business card, or Google listing. Wherever you display your number.' },
     { step: 2, title: 'They Text You', description: '"Hey, do you guys do sprinkler repair?" The customer texts like they would any business.' },
     { step: 3, title: 'AI Responds Instantly', description: 'Same AI brain that powers your chat and phone. Personalized, knowledgeable answers in seconds.' },
-    { step: 4, title: 'Conversation Flows', description: 'AI handles follow-ups, captures contact info, and can book appointments — all through text.' },
+    { step: 4, title: 'Conversation Flows', description: 'AI handles follow-ups, captures contact info, and can book appointments. All through text.' },
     { step: 5, title: 'You Get Alerted', description: 'New lead notification with name, job type, and a link to the full conversation. Jump in anytime to take over.' },
   ],
   sellingPoints: [
@@ -255,7 +255,7 @@ export const VOICE_PAGE = {
     { step: 1, title: 'Call Comes In', description: 'Customer calls your business number. Configurable as overflow (rings you first) or always-on.' },
     { step: 2, title: 'AI Answers', description: '"Thanks for calling Ace Plumbing! I\'m Alex, how can I help?" Natural voice, not a phone tree.' },
     { step: 3, title: 'Full Conversation', description: 'AI asks smart follow-up questions, answers questions about services, hours, and availability.' },
-    { step: 4, title: 'Info Captured', description: 'Name, phone, job type — all extracted from the conversation automatically.' },
+    { step: 4, title: 'Info Captured', description: 'Name, phone, job type. All extracted from the conversation automatically.' },
     { step: 5, title: 'You Get Everything', description: 'SMS alert with call summary + full transcript in your dashboard. Emergency calls flagged immediately.' },
   ],
   sellingPoints: [
@@ -272,10 +272,10 @@ export const VOICE_PAGE = {
 export const WEBSITE_PAGE = {
   badge: 'Pro Website',
   headline: 'No Website? We\'ll Build One For You.',
-  subheadline: 'A professional, mobile-friendly website designed for your trade — built by us, hosted by us, maintained by us. Included in your Ligato AI plan.',
+  subheadline: 'A professional, mobile-friendly website designed for your trade. Built by us, hosted by us, maintained by us. Included in your Ligato AI plan.',
   howItWorks: [
     { step: 1, title: 'Tell Us About Your Business', description: 'A quick form or 10-minute call. We\'ll ask about your services, service area, and what makes you stand out.' },
-    { step: 2, title: 'We Design & Build Everything', description: 'Custom layout, professional copy, mobile-friendly design. We handle it all — you don\'t lift a finger.' },
+    { step: 2, title: 'We Design & Build Everything', description: 'Custom layout, professional copy, mobile-friendly design. We handle it all so you don\'t lift a finger.' },
     { step: 3, title: 'Your Site Goes Live', description: 'Live in under a week. Your AI chat widget is already embedded, ready to capture leads from day one.' },
     { step: 4, title: 'We Maintain It Forever', description: 'Need to update your services or add new photos? Just ask. Unlimited edits included.' },
     { step: 5, title: 'Customers Find You on Google', description: 'Built with SEO basics so you actually show up when homeowners search for your services.' },
@@ -286,7 +286,7 @@ export const WEBSITE_PAGE = {
     { title: 'We Write Everything', description: 'Don\'t know what to put on your site? We write all the content for you based on your business.' },
     { title: 'Mobile-First Design', description: 'Looks great on the phones your customers are using to find you. Touch-friendly, fast-loading.' },
     { title: 'Unlimited Edits', description: 'New service? Updated hours? Just text or email us and we\'ll update your site. No extra charge.' },
-    { title: 'AI Chat Built In', description: 'Your Ligato AI chat widget is embedded from day one — converting visitors into leads 24/7.' },
+    { title: 'AI Chat Built In', description: 'Your Ligato AI chat widget is embedded from day one, converting visitors into leads 24/7.' },
   ],
 };
 
@@ -294,9 +294,9 @@ export const ABOUT_CONTENT = {
   headline: 'Built for the Trades',
   subheadline: 'We built Ligato AI because home service pros deserve better than missed calls and contact form black holes.',
   story: [
-    'Every day, skilled tradespeople lose jobs — not because they lack talent, but because they can\'t answer the phone while they\'re 20 feet up a ladder or elbow-deep in a repair.',
+    'Every day, skilled tradespeople lose jobs. Not because they lack talent, but because they can\'t answer the phone while they\'re 20 feet up a ladder or elbow-deep in a repair.',
     'The big companies have call centers. They have receptionists. They have teams of people handling inbound leads. Solo operators and small crews? They\'ve got voicemail. And nobody leaves voicemails anymore.',
-    'Ligato AI levels the playing field. One AI brain, trained on your specific business, handling every call, text, and website chat — 24/7. It\'s the first employee every solo operator can actually afford.',
+    'Ligato AI levels the playing field. One AI brain, trained on your specific business, handling every call, text, and website chat. 24/7. It\'s the first employee every solo operator can actually afford.',
   ],
   mission: 'Our mission is simple: make sure no home service pro ever loses a job because they couldn\'t answer the phone.',
 };

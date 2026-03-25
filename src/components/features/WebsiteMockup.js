@@ -151,7 +151,7 @@ export default function WebsiteMockup() {
             transition={{ delay: 2.5 }}
             className="text-center text-gray-400 text-sm mt-6"
           >
-            Your AI chat widget comes pre-installed — capturing leads from day one.
+            Your AI chat widget comes pre-installed, capturing leads from day one.
           </motion.p>
         </motion.div>
       </div>

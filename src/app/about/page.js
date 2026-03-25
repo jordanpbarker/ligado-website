@@ -61,33 +61,30 @@ export default function AboutPage() {
         </motion.div>
       </SectionContainer>
 
-      {/* Team placeholder */}
+      {/* Values */}
       <SectionContainer dark>
         <motion.div
-          variants={fadeInUp}
+          variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold text-white mb-4">The Team</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">What Drives Us</h2>
           <p className="text-gray-400 max-w-xl mx-auto mb-12">
-            A small team of builders who believe tradespeople deserve better technology.
+            Built for tradespeople, by people who understand the work.
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-3xl mx-auto">
             {[
-              { name: 'Founder', role: 'CEO & Product' },
-              { name: 'Co-Founder', role: 'Engineering' },
-              { name: 'Team Member', role: 'Growth' },
-            ].map((person) => (
-              <div key={person.role} className="glass-card rounded-2xl p-6 text-center">
-                <div className="w-20 h-20 bg-accent/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-accent text-2xl font-bold">{person.name[0]}</span>
-                </div>
-                <h3 className="text-white font-semibold">{person.name}</h3>
-                <p className="text-gray-400 text-sm mt-1">{person.role}</p>
-              </div>
+              { title: 'Speed Over Complexity', desc: 'Simple tools that work from day one. No training manuals required.' },
+              { title: 'Built for the Trades', desc: 'Every feature is designed for how service businesses actually operate.' },
+              { title: 'Always Available', desc: 'Your AI never takes a day off, so you never miss an opportunity.' },
+            ].map((value) => (
+              <motion.div key={value.title} variants={fadeInUp} className="glass-card rounded-2xl p-6 text-left">
+                <h3 className="text-white font-semibold mb-2">{value.title}</h3>
+                <p className="text-gray-400 text-sm">{value.desc}</p>
+              </motion.div>
             ))}
           </div>
         </motion.div>

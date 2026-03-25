@@ -144,7 +144,7 @@ export default function ChatMockup() {
               </div>
               <div>
                 <div className="text-sm font-semibold text-navy-950">New Lead Alert</div>
-                <div className="text-xs text-gray-500 mt-0.5">Mike — Kitchen faucet repair — Just now</div>
+                <div className="text-xs text-gray-500 mt-0.5">Mike · Kitchen faucet repair · Just now</div>
               </div>
             </motion.div>
           )}
