@@ -49,10 +49,13 @@ export default function TermsPage() {
 
             <p className="font-medium text-white mt-4">Opt-In</p>
             <p className="mt-2">
-              By providing your phone number during signup, demo booking, or through any of our forms, and by
-              checking the consent box or otherwise agreeing to receive messages, you expressly consent to receive
-              recurring SMS/MMS messages from Ligato AI at the phone number you provided. Consent is not a
-              condition of any purchase.
+              Business owners consent to receive notifications when they sign up for the Ligato AI platform
+              at getligato.com. During account setup or demo booking, the business owner provides their mobile
+              phone number and checks the SMS consent checkbox on the sign-up form, agreeing to receive automated
+              text notifications about calls, leads, and urgent requests handled by their AI assistant. By
+              checking the consent checkbox and submitting the form, you expressly consent to receive recurring
+              SMS/MMS messages from Ligato AI at the phone number you provided. Consent is not a condition of
+              any purchase.
             </p>
 
             <p className="font-medium text-white mt-4">Opt-Out Instructions</p>

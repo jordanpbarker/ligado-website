@@ -71,8 +71,10 @@ export default function PrivacyPolicyPage() {
 
             <p className="font-medium text-white mt-4">SMS/Text Messaging</p>
             <p className="mt-2">
-              By providing your phone number and opting in, you consent to receive text messages from Ligato AI
-              related to your account, including lead alerts, appointment confirmations, and service notifications.
+              Business owners provide consent to receive SMS/text messages by submitting the sign-up form on
+              our website at getligato.com and checking the SMS consent checkbox. During account setup or demo
+              booking, the business owner provides their mobile phone number and agrees to receive automated
+              text notifications about calls, leads, and urgent requests handled by their AI assistant.
               Message frequency varies based on your account activity. Message and data rates may apply.
               Consent to receive text messages is not a condition of purchasing any goods or services.
             </p>

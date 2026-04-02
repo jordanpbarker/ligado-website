@@ -7,12 +7,14 @@ import { IconCheck, IconChat, IconMobile, IconPhone } from '@/components/ui/Icon
 
 export default function DemoForm() {
   const [formData, setFormData] = useState({
+    businessName: '',
     name: '',
     email: '',
     phone: '',
     businessType: '',
     message: '',
   });
+  const [smsConsent, setSmsConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
@@ -96,7 +98,20 @@ export default function DemoForm() {
 
                 <div className="space-y-5">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Full Name</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Business Name</label>
+                    <input
+                      type="text"
+                      name="businessName"
+                      required
+                      value={formData.businessName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl text-navy-950 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
+                      placeholder="Ace Plumbing"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Owner Name</label>
                     <input
                       type="text"
                       name="name"
@@ -105,19 +120,6 @@ export default function DemoForm() {
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-xl text-navy-950 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                       placeholder="John Smith"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl text-navy-950 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
-                      placeholder="john@aceplumbing.com"
                     />
                   </div>
 
@@ -131,6 +133,19 @@ export default function DemoForm() {
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-xl text-navy-950 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                       placeholder="(801) 555-0123"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl text-navy-950 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
+                      placeholder="john@aceplumbing.com"
                     />
                   </div>
 
@@ -163,12 +178,31 @@ export default function DemoForm() {
                       placeholder="Tell us about your business..."
                     />
                   </div>
+
+                  {/* SMS consent checkbox - required for A2P 10DLC compliance */}
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      id="smsConsent"
+                      checked={smsConsent}
+                      onChange={(e) => setSmsConsent(e.target.checked)}
+                      className="mt-1 h-4 w-4 rounded border-gray-300 text-accent focus:ring-accent flex-shrink-0"
+                    />
+                    <label htmlFor="smsConsent" className="text-xs text-gray-500 leading-relaxed">
+                      By providing your phone number, you agree to receive automated text notifications from
+                      Ligato AI about calls, leads, and service updates. Message frequency varies. Msg &amp; data
+                      rates may apply. Reply STOP to opt out. See our{' '}
+                      <a href="/privacy-policy" className="text-accent underline hover:text-accent-hover">Privacy Policy</a>
+                      {' '}and{' '}
+                      <a href="/terms" className="text-accent underline hover:text-accent-hover">Terms &amp; Conditions</a>.
+                    </label>
+                  </div>
                 </div>
 
                 <button
                   type="submit"
-                  disabled={submitting}
-                  className="w-full mt-6 bg-accent text-navy-950 font-semibold py-3.5 rounded-xl hover:bg-accent-hover transition-colors shadow-lg shadow-accent/20 disabled:opacity-50"
+                  disabled={submitting || !smsConsent}
+                  className="w-full mt-6 bg-accent text-navy-950 font-semibold py-3.5 rounded-xl hover:bg-accent-hover transition-colors shadow-lg shadow-accent/20 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {submitting ? 'Sending...' : 'Book My Demo'}
                 </button>
