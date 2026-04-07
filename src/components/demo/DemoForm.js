@@ -26,7 +26,7 @@ export default function DemoForm() {
       await fetch('/api/demo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, smsConsent }),
       });
     } catch {
       // Silently handle - form still shows success
@@ -189,9 +189,9 @@ export default function DemoForm() {
                       className="mt-1 h-4 w-4 rounded border-gray-300 text-accent focus:ring-accent flex-shrink-0"
                     />
                     <label htmlFor="smsConsent" className="text-xs text-gray-500 leading-relaxed">
-                      By providing your phone number, you agree to receive automated text notifications from
-                      Ligato AI about calls, leads, and service updates. Message frequency varies. Msg &amp; data
-                      rates may apply. Reply STOP to opt out. See our{' '}
+                      <span className="font-medium text-gray-600">(Optional)</span> I agree to receive automated text notifications from
+                      Ligato AI about calls, leads, and service updates. Consent is not required to use Ligato AI.
+                      Msg &amp; data rates may apply. Reply STOP to opt out. See our{' '}
                       <a href="/privacy-policy" className="text-accent underline hover:text-accent-hover">Privacy Policy</a>
                       {' '}and{' '}
                       <a href="/terms" className="text-accent underline hover:text-accent-hover">Terms &amp; Conditions</a>.
@@ -201,7 +201,7 @@ export default function DemoForm() {
 
                 <button
                   type="submit"
-                  disabled={submitting || !smsConsent}
+                  disabled={submitting}
                   className="w-full mt-6 bg-accent text-navy-950 font-semibold py-3.5 rounded-xl hover:bg-accent-hover transition-colors shadow-lg shadow-accent/20 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {submitting ? 'Sending...' : 'Book My Demo'}
