@@ -7,6 +7,7 @@ export const NAV_LINKS = [
       { label: 'AI Text/SMS', href: '/ai-text-sms', description: 'Instant intelligent text replies' },
       { label: 'AI Voice/Phone', href: '/ai-voice-phone', description: 'Never miss a call again' },
       { label: 'Pro Website', href: '/websites', description: 'A website built for your trade' },
+      { label: 'Lead Alerts & Follow-Ups', href: '/lead-alerts', description: 'Instant alerts + automated follow-ups' },
     ],
   },
   { label: 'Pricing', href: '/pricing' },
@@ -289,6 +290,37 @@ export const WEBSITE_PAGE = {
     { title: 'AI Chat Built In', description: 'Your Ligato AI chat widget is embedded from day one, converting visitors into leads 24/7.' },
   ],
 };
+
+// Lead Alerts & Follow-Ups feature page content
+export const ALERTS_PAGE = {
+  badge: 'Lead Alerts & Follow-Ups',
+  headline: 'Every Lead Gets Chased Down. Automatically.',
+  subheadline: 'Instant owner alerts the second a lead comes in. Automated follow-ups for leads who don\'t book. Appointment reminders so nobody forgets. You stay in the loop without lifting a finger.',
+  howItWorks: [
+    { step: 1, title: 'Lead Comes In', description: 'A customer calls, texts, or chats. The AI handles the conversation and captures their info.' },
+    { step: 2, title: 'You Get Alerted Instantly', description: 'Within 30 seconds, you get an SMS and email with the lead\'s name, phone, job type, and urgency level.' },
+    { step: 3, title: 'AI Follows Up Automatically', description: 'If the lead doesn\'t book, Ligato sends a follow-up email (and text once approved) 2 hours later.' },
+    { step: 4, title: 'Appointment Reminders Go Out', description: '24 hours before a booked appointment, the customer gets a reminder with the date, time, and business phone number.' },
+    { step: 5, title: 'Track Everything in Your Dashboard', description: 'See pending follow-ups, sent messages, and reminder status in the Follow-Up Center. Nothing falls through the cracks.' },
+  ],
+  sellingPoints: [
+    { title: '30-Second Owner Alerts', description: 'SMS + email the moment a lead is captured. Emergency situations flagged with priority alerts so you can act fast.' },
+    { title: 'Automated Follow-Ups', description: 'Leads who call but don\'t book get a friendly follow-up. No manual effort — the system handles it.' },
+    { title: 'Appointment Reminders', description: 'Customers get a reminder 24 hours before their appointment. Fewer no-shows, less wasted time.' },
+    { title: 'Follow-Up Center Dashboard', description: 'One place to see every pending follow-up, every sent message, and every upcoming reminder.' },
+    { title: 'Email Now, SMS When Ready', description: 'Email follow-ups and reminders work immediately. SMS activates the moment your business texting is approved.' },
+    { title: 'No Leads Left Behind', description: 'The #1 reason small businesses lose jobs: slow follow-up. Ligato makes sure every lead gets chased.' },
+  ],
+};
+
+// Alerts mockup conversation for the feature page
+export const ALERTS_TIMELINE = [
+  { type: 'lead', time: '2:14 PM', title: 'New lead via Voice', description: 'Mike Johnson — kitchen faucet repair, Provo UT' },
+  { type: 'alert', time: '2:14 PM', title: 'Owner alert sent', description: 'SMS + email to your phone' },
+  { type: 'followup', time: '4:14 PM', title: 'Auto follow-up sent', description: '"Hi Mike, following up on your faucet repair inquiry..."' },
+  { type: 'booking', time: '4:22 PM', title: 'Mike books appointment', description: 'Tuesday at 9:00 AM' },
+  { type: 'reminder', time: 'Mon 9:00 AM', title: 'Reminder sent to Mike', description: '"Just a reminder — we\'re coming out tomorrow at 9 AM"' },
+];
 
 export const ABOUT_CONTENT = {
   headline: 'Built for the Trades',
