@@ -103,22 +103,18 @@ export const CROSS_FEATURES = [
 export const PRICING = {
   price: '$199',
   period: '/month',
-  tagline: 'Everything you need. One simple price.',
-  comparison: 'Less than $3/hour for a 24/7 receptionist.',
+  tagline: 'Everything your front desk should be, for less than one missed job.',
+  comparison: 'No contracts. Cancel anytime.',
   features: [
-    'All four products (Chat, SMS, Voice, Website)',
-    '1,000 voice minutes included',
-    'Unlimited chat & SMS conversations',
-    'Custom AI brain trained on your business',
-    'Instant lead alerts (SMS + email)',
-    'Full conversation transcripts',
-    'Built-in CRM pipeline',
-    'Appointment booking integration',
-    'After-hours coverage',
-    'Trade-specific AI knowledge',
-    'Professional website built for your business',
+    'AI Voice Receptionist \u2014 answers every call, 24/7, never takes a sick day',
+    '250 voice minutes included (~50 calls/month)',
+    'Unlimited AI SMS \u2014 texts back leads the moment they reach out',
+    'Unlimited AI Chat Widget \u2014 qualifies visitors on your website',
+    'Pro Website included \u2014 fast, mobile, built to convert',
+    'Dedicated local phone number',
+    'Instant lead alerts to your phone',
   ],
-  noFees: 'No setup fees. No contracts. $0.25/min after 1,000 minutes.',
+  noFees: 'Additional minutes billed at $0.30/min. Most solo operators and small crews stay well within the included 250 minutes.',
 };
 
 export const FAQ_ITEMS = [
@@ -152,7 +148,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'Are there per-message or per-call fees?',
-    answer: 'Your plan includes 1,000 voice minutes per month, more than enough for most small businesses. Chat and SMS are unlimited. If you go over 1,000 voice minutes, it\'s just $0.25 per additional minute. No hidden fees.',
+    answer: 'Your plan includes 250 voice minutes per month (roughly 50 calls). Chat and SMS are unlimited. If you go over 250 voice minutes, it\'s just $0.30 per additional minute. Most solo operators and small crews stay well within the included minutes.',
   },
 ];
 

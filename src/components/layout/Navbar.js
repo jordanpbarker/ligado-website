@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { IconChevronDown, IconBars3, IconXMark } from '@/components/ui/Icons';
@@ -44,10 +45,8 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-              <span className="text-navy-950 font-bold text-sm">L</span>
-            </div>
+          <Link href="/" className="flex items-center gap-2.5">
+            <Image src="/logo.png" alt="Ligato AI" width={32} height={32} />
             <span className="text-white font-bold text-xl">Ligato <span className="text-accent">AI</span></span>
           </Link>
 

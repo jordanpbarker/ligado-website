@@ -42,8 +42,8 @@ export default function CrossFeatures() {
               className="surface-card rounded-xl p-5 hover:border-white/10 transition-colors duration-200"
             >
               <div className="flex items-start gap-4">
-                <div className="w-9 h-9 bg-white/[0.07] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-4.5 h-4.5 text-gray-300" />
+                <div className="flex-shrink-0 mt-0.5">
+                  <Icon className="w-5 h-5 text-gray-400" />
                 </div>
                 <div>
                   <h3 className="text-base font-medium text-white mb-1">{feature.title}</h3>
