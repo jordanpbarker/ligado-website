@@ -247,8 +247,9 @@ function CallTimeline({ activeStages, vertical = false, channel = 'voice' }) {
         <h3 className="text-[10px] font-medium text-gray-500 uppercase tracking-wider">Live Activity</h3>
       </div>
 
-      <div className="relative flex items-start gap-0">
-        <div className="absolute top-[11px] left-3 right-3 h-px bg-navy-700/60" />
+      <div className="overflow-x-auto -mx-5 px-5 pb-1">
+        <div className="relative flex items-start gap-0 min-w-[480px]">
+          <div className="absolute top-[11px] left-3 right-3 h-px bg-navy-700/60" />
 
         {CALL_STAGES.map((stage, i) => {
           const isActive = activeStages.has(stage.id);
@@ -289,6 +290,7 @@ function CallTimeline({ activeStages, vertical = false, channel = 'voice' }) {
             </div>
           );
         })}
+        </div>
       </div>
     </motion.div>
   );
