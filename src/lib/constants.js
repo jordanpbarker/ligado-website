@@ -59,7 +59,7 @@ export const PAIN_POINTS = {
   ],
   with: [
     'AI answers every call, text, and chat instantly',
-    '$499/mo. A fraction of a receptionist\'s salary',
+    '$199/mo. A fraction of a receptionist\'s salary',
     'Leads captured and alerts sent in 30 seconds',
     'First to respond, every single time',
     '24/7 coverage: nights, weekends, holidays',
@@ -101,7 +101,7 @@ export const CROSS_FEATURES = [
 ];
 
 export const PRICING = {
-  price: '$499',
+  price: '$199',
   period: '/month',
   tagline: 'Everything you need. One simple price.',
   comparison: 'Less than $3/hour for a 24/7 receptionist.',

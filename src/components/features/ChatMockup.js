@@ -19,9 +19,9 @@ function TypingIndicator() {
 const STAGES = [
   { id: 'connected', label: 'Chat Connected', icon: '💬', triggerAt: 0 },
   { id: 'assessing', label: 'Assessing Need', icon: '📋', triggerAt: 2 },
-  { id: 'lead-captured', label: 'Lead Captured', icon: '👤', triggerAt: 5 },
-  { id: 'scheduling', label: 'Booking Appointment', icon: '📅', triggerAt: 3 },
-  { id: 'confirmed', label: 'Appointment Confirmed', icon: '✓', triggerAt: 6 },
+  { id: 'scheduling', label: 'Booking Appointment', icon: '📅', triggerAt: 5 },
+  { id: 'lead-captured', label: 'Lead Captured', icon: '👤', triggerAt: 6 },
+  { id: 'confirmed', label: 'Appointment Confirmed', icon: '✓', triggerAt: 7 },
   { id: 'notification', label: 'Owner Notified', icon: '✉', triggerAt: 7 },
 ];
 
