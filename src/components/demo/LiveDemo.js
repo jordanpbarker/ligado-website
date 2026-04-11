@@ -87,63 +87,64 @@ const CALL_STAGES = [
 ];
 
 // Detect which stages should be active based on transcript content.
-// Stages are strictly sequential — each one requires the previous to have fired,
-// so nothing jumps ahead even if a keyword appears early.
+// After "assessing", stages fire independently based on keyword detection
+// so they don't block each other if the conversation flows differently than expected.
 function detectStages(transcript, callActive) {
   const stages = new Set();
   if (!callActive && transcript.length === 0) return stages;
 
-  // Walk the transcript in order, tracking where we are in the conversation
   const entries = transcript.map(t => ({
     role: t.role,
     text: t.text.toLowerCase(),
   }));
   const assistantMsgs = entries.filter(e => e.role === 'assistant');
   const userMsgs = entries.filter(e => e.role === 'user');
+  const allAssistantText = assistantMsgs.map(e => e.text).join(' ');
 
-  // 1. Connected — call is live
+  // 1. Connected
   if (callActive || transcript.length > 0) stages.add('connected');
   else return stages;
 
-  // 2. Assessing need — user has described their problem (at least 1 user message
-  //    after the initial greeting exchange)
+  // 2. Assessing need — at least one exchange has happened
   if (userMsgs.length >= 1 && assistantMsgs.length >= 1) {
     stages.add('assessing');
   } else return stages;
 
-  // 3. Lead captured — assistant asked for name AND user responded after that ask.
-  //    We find the index where the assistant asks for a name, then check that the
-  //    user spoke at least once after that point.
-  const nameAskPatterns = /\bname\b|who am i speaking|who('s| is) calling|can i get your name|may i have your name|who('s| is) this/;
-  let nameAskIndex = -1;
+  // 3. Lead captured — assistant asks for name OR user gives their name
+  const nameAskPatterns = /\bname\b|who am i speaking|who('s| is) calling|can i get your|may i have your|what('s| is) your name|who('s| is) this/;
+  const nameGivePatterns = /\b(this is|my name is|i('m| am)|it('s| is)) [A-Z]/;
+  const assistantAskedName = assistantMsgs.some(e => nameAskPatterns.test(e.text));
+  const userGaveName = entries.some(e => e.role === 'user' && nameGivePatterns.test(e.text));
+  // Also detect when assistant uses a name in response (e.g. "Great, John")
+  const assistantUsedName = assistantMsgs.length >= 3 && assistantMsgs.slice(1).some(e => /\b(great|thanks|perfect|got it),? [a-z]+\b/i.test(e.text));
+  if ((assistantAskedName && userMsgs.length >= 2) || (userGaveName && userMsgs.length >= 2) || assistantUsedName) {
+    stages.add('lead-captured');
+  }
+
+  // 4. Scheduling — AI offers specific times/dates
+  const schedulePatterns = /we have (an |some )?opening|we have availability|how about .*(am|pm)|which works|what works|available (on|at|this|next|tomorrow)|(monday|tuesday|wednesday|thursday|friday|saturday|sunday) at \d|tomorrow (morning|afternoon|at)|next week|\d{1,2}\s?(am|pm)\b/;
+  let scheduleIndex = -1;
   for (let i = 0; i < entries.length; i++) {
-    if (entries[i].role === 'assistant' && nameAskPatterns.test(entries[i].text)) {
-      nameAskIndex = i;
+    if (entries[i].role === 'assistant' && schedulePatterns.test(entries[i].text)) {
+      scheduleIndex = i;
+      stages.add('scheduling');
       break;
     }
   }
-  const userSpokeAfterNameAsk = nameAskIndex >= 0 && entries.slice(nameAskIndex + 1).some(e => e.role === 'user');
-  if (userSpokeAfterNameAsk) {
-    stages.add('lead-captured');
-  } else return stages;
 
-  // 4. Notification — handled by timer in component (fires 2.5s after lead-captured)
-
-  // 5. Scheduling — assistant specifically mentions scheduling/appointment AFTER
-  //    the name exchange (ignore early mentions like "would you like to schedule" in greeting)
-  const schedulePatterns = /schedule|appointment|what (time|day|date)|when would you|when works|slot|come (by|out|over)|set (up|that up)|pencil you in/;
-  const postNameEntries = entries.slice(nameAskIndex + 1);
-  const hasSchedulingTalk = postNameEntries.some(e => e.role === 'assistant' && schedulePatterns.test(e.text));
-  if (hasSchedulingTalk) {
-    stages.add('scheduling');
-  } else return stages;
-
-  // 6. Confirmed — assistant confirms the booking is set
-  const confirmPatterns = /confirmed|you('re| are) (all set|booked|scheduled)|see you (on|at|then)|got you (down|booked|scheduled)|that('s| is) (set|booked|confirmed)|appointment is set/;
-  const hasConfirmation = postNameEntries.some(e => e.role === 'assistant' && confirmPatterns.test(e.text));
-  if (hasConfirmation) {
-    stages.add('confirmed');
+  // 5. Confirmed — must come from assistant messages AFTER the scheduling message,
+  //    and after the user has responded to the scheduling offer
+  if (stages.has('lead-captured') && stages.has('scheduling') && scheduleIndex >= 0) {
+    const postScheduleEntries = entries.slice(scheduleIndex + 1);
+    const userRespondedToSchedule = postScheduleEntries.some(e => e.role === 'user');
+    const confirmPatterns = /confirmed|booked|all set|see you|got you (down|booked|scheduled)|you('re| are) (set|booked|scheduled)|look(ing)? forward|have a (great|good|wonderful) (day|one|evening)|take care|thank you for call|thanks for call|goodbye|bye\b|excellent|we('ll| will) see you/;
+    const hasConfirmAfterSchedule = postScheduleEntries.some(e => e.role === 'assistant' && confirmPatterns.test(e.text));
+    if (userRespondedToSchedule && hasConfirmAfterSchedule) {
+      stages.add('confirmed');
+    }
   }
+
+  // 6. Notification — handled by timer in component (fires after confirmed)
 
   return stages;
 }
@@ -302,18 +303,26 @@ function VoiceDemo() {
   const [error, setError] = useState(null);
   const vapiRef = useRef(null);
   const notificationTimer = useRef(null);
+  const hangupTimer = useRef(null);
 
   // Update stages when transcript changes
   const updateStages = useCallback((currentTranscript, callActive) => {
     const detected = detectStages(currentTranscript, callActive);
     setActiveStages(prev => {
-      // Only add stages, never remove (stages persist once shown)
       const merged = new Set([...prev, ...detected]);
-      // Trigger notification timer when lead-captured appears
-      if (merged.has('confirmed') && !prev.has('confirmed') && !notificationTimer.current) {
-        notificationTimer.current = setTimeout(() => {
-          setActiveStages(p => new Set([...p, 'notification']));
-        }, 2500);
+      if (merged.has('confirmed') && !prev.has('confirmed')) {
+        if (!notificationTimer.current) {
+          notificationTimer.current = setTimeout(() => {
+            setActiveStages(p => new Set([...p, 'notification']));
+          }, 2500);
+        }
+        // Auto-hangup 15s after confirmation so Alex can finish the goodbye
+        if (hangupTimer.current) clearTimeout(hangupTimer.current);
+        hangupTimer.current = setTimeout(() => {
+          if (vapiRef.current) {
+            vapiRef.current.stop();
+          }
+        }, 15000);
       }
       return merged;
     });
@@ -322,6 +331,7 @@ function VoiceDemo() {
   useEffect(() => {
     return () => {
       if (notificationTimer.current) clearTimeout(notificationTimer.current);
+      if (hangupTimer.current) clearTimeout(hangupTimer.current);
     };
   }, []);
 
@@ -338,6 +348,10 @@ function VoiceDemo() {
     if (notificationTimer.current) {
       clearTimeout(notificationTimer.current);
       notificationTimer.current = null;
+    }
+    if (hangupTimer.current) {
+      clearTimeout(hangupTimer.current);
+      hangupTimer.current = null;
     }
     setStatus('connecting');
 
@@ -362,8 +376,11 @@ function VoiceDemo() {
       vapi.on('message', (msg) => {
         if (msg.type === 'transcript' && msg.transcriptType === 'final') {
           const newEntry = { role: msg.role || 'unknown', text: msg.transcript || '' };
+          console.log('[TRANSCRIPT]', newEntry.role, ':', newEntry.text);
           setTranscript((prev) => {
             const updated = [...prev, newEntry];
+            const detected = detectStages(updated, true);
+            console.log('[STAGES]', [...detected]);
             updateStages(updated, true);
             return updated;
           });
