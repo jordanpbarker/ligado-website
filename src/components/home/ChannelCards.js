@@ -30,22 +30,22 @@ export default function ChannelCards() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+        className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5"
       >
-        {CHANNELS.map((channel) => {
+        {CHANNELS.map((channel, i) => {
           const Icon = icons[channel.icon];
           return (
             <motion.div key={channel.name} variants={fadeInUp}>
               <Link href={channel.slug} className="block group">
-                <div className="glass-card rounded-2xl p-8 h-full hover:border-accent/30 transition-all duration-300 group-hover:-translate-y-1">
-                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
-                    <Icon className="w-6 h-6 text-accent" />
+                <div className="surface-card rounded-xl p-6 h-full hover:border-white/12 transition-colors duration-200">
+                  <div className="w-10 h-10 bg-white/[0.07] rounded-lg flex items-center justify-center mb-4">
+                    <Icon className={`w-5 h-5 ${i === 0 ? 'text-accent' : 'text-gray-300'}`} />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{channel.name}</h3>
-                  <p className="text-gray-400 leading-relaxed">{channel.description}</p>
-                  <div className="mt-5 flex items-center gap-2 text-accent text-sm font-medium">
+                  <h3 className="text-lg font-medium text-white mb-2">{channel.name}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{channel.description}</p>
+                  <div className="mt-4 flex items-center gap-1.5 text-gray-400 text-sm group-hover:text-white transition-colors">
                     Learn more
-                    <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    <span className="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
                   </div>
                 </div>
               </Link>

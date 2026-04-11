@@ -1,8 +1,9 @@
-import { VOICE_PAGE } from '@/lib/constants';
+import { VOICE_PAGE, VOICE_ALERTS } from '@/lib/constants';
 import FeatureHero from '@/components/features/FeatureHero';
 import VoiceMockup from '@/components/features/VoiceMockup';
 import HowItWorks from '@/components/features/HowItWorks';
 import SellingPoints from '@/components/features/SellingPoints';
+import AlertsMockup from '@/components/features/AlertsMockup';
 import FinalCTA from '@/components/home/FinalCTA';
 
 export const metadata = {
@@ -21,6 +22,12 @@ export default function AiVoicePhonePage() {
       <VoiceMockup />
       <HowItWorks steps={VOICE_PAGE.howItWorks} />
       <SellingPoints points={VOICE_PAGE.sellingPoints} />
+      <AlertsMockup
+        badge={VOICE_ALERTS.badge}
+        headline={VOICE_ALERTS.headline}
+        description={VOICE_ALERTS.description}
+        timeline={VOICE_ALERTS.timeline}
+      />
       <FinalCTA />
     </>
   );

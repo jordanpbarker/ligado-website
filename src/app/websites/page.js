@@ -1,8 +1,9 @@
-import { WEBSITE_PAGE } from '@/lib/constants';
+import { WEBSITE_PAGE, WEBSITE_ALERTS } from '@/lib/constants';
 import FeatureHero from '@/components/features/FeatureHero';
 import WebsiteMockup from '@/components/features/WebsiteMockup';
 import HowItWorks from '@/components/features/HowItWorks';
 import SellingPoints from '@/components/features/SellingPoints';
+import AlertsMockup from '@/components/features/AlertsMockup';
 import FinalCTA from '@/components/home/FinalCTA';
 
 export const metadata = {
@@ -21,6 +22,12 @@ export default function WebsitesPage() {
       <WebsiteMockup />
       <HowItWorks steps={WEBSITE_PAGE.howItWorks} />
       <SellingPoints points={WEBSITE_PAGE.sellingPoints} />
+      <AlertsMockup
+        badge={WEBSITE_ALERTS.badge}
+        headline={WEBSITE_ALERTS.headline}
+        description={WEBSITE_ALERTS.description}
+        timeline={WEBSITE_ALERTS.timeline}
+      />
       <FinalCTA />
     </>
   );

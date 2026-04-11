@@ -9,23 +9,22 @@ import SectionHeading from '@/components/ui/SectionHeading';
 
 export default function PainPoints() {
   return (
-    <SectionContainer>
+    <SectionContainer spacing="breathing">
       <SectionHeading
         title="The Difference Is Night and Day"
         subtitle="See what changes when every call, text, and chat gets answered instantly."
       />
 
-      <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-        {/* Without Ligato */}
+      <div className="grid md:grid-cols-5 gap-8 lg:gap-12">
+        {/* Without Ligato — narrower, faded */}
         <motion.div
           variants={slideInLeft}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="bg-gray-50 rounded-2xl p-8 border border-gray-200"
+          className="md:col-span-2 rounded-xl p-6 border border-gray-100"
         >
-          <h3 className="text-lg font-semibold text-gray-400 mb-6 flex items-center gap-2">
-            <IconXCircle className="w-5 h-5 text-red-400" />
+          <h3 className="text-sm font-medium text-gray-400 mb-5 uppercase tracking-wider">
             Without Ligato
           </h3>
           <motion.ul
@@ -33,27 +32,26 @@ export default function PainPoints() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="space-y-4"
+            className="space-y-3.5"
           >
             {PAIN_POINTS.without.map((point, i) => (
               <motion.li key={i} variants={fadeInUp} className="flex items-start gap-3">
-                <IconXCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-500">{point}</span>
+                <IconXCircle className="w-4 h-4 text-gray-300 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-400 text-sm">{point}</span>
               </motion.li>
             ))}
           </motion.ul>
         </motion.div>
 
-        {/* With Ligato */}
+        {/* With Ligato — wider, prominent */}
         <motion.div
           variants={slideInRight}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="bg-navy-950 rounded-2xl p-8 border border-accent/20"
+          className="md:col-span-3 bg-navy-950 rounded-xl p-8 border border-white/[0.06]"
         >
-          <h3 className="text-lg font-semibold text-accent mb-6 flex items-center gap-2">
-            <IconCheckCircle className="w-5 h-5 text-accent" />
+          <h3 className="text-sm font-medium text-accent mb-5 uppercase tracking-wider">
             With Ligato
           </h3>
           <motion.ul
@@ -61,12 +59,12 @@ export default function PainPoints() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="space-y-4"
+            className="space-y-3.5"
           >
             {PAIN_POINTS.with.map((point, i) => (
               <motion.li key={i} variants={fadeInUp} className="flex items-start gap-3">
-                <IconCheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300">{point}</span>
+                <IconCheckCircle className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                <span className="text-gray-300 text-sm">{point}</span>
               </motion.li>
             ))}
           </motion.ul>

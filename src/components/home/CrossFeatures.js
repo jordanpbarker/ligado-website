@@ -18,7 +18,7 @@ const icons = {
 
 export default function CrossFeatures() {
   return (
-    <SectionContainer dark>
+    <SectionContainer dark spacing="tight">
       <SectionHeading
         badge="Features"
         title="Built for How You Actually Work"
@@ -31,21 +31,25 @@ export default function CrossFeatures() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
-        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
       >
-        {CROSS_FEATURES.map((feature) => {
+        {CROSS_FEATURES.map((feature, i) => {
           const Icon = icons[feature.icon];
           return (
             <motion.div
               key={feature.title}
               variants={fadeInUp}
-              className="glass-card rounded-2xl p-6 hover:border-accent/20 transition-all duration-300"
+              className="surface-card rounded-xl p-5 hover:border-white/10 transition-colors duration-200"
             >
-              <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
-                <Icon className="w-5 h-5 text-accent" />
+              <div className="flex items-start gap-4">
+                <div className="w-9 h-9 bg-white/[0.07] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-4.5 h-4.5 text-gray-300" />
+                </div>
+                <div>
+                  <h3 className="text-base font-medium text-white mb-1">{feature.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{feature.description}</p>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
             </motion.div>
           );
         })}

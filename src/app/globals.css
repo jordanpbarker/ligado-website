@@ -16,19 +16,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Gradient orb for hero backgrounds */
-.gradient-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.3;
-}
-
-/* Glass card effect */
-.glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+/* Solid card surface — replaces glassmorphism */
+.surface-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* Scrollbar styling */

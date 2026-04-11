@@ -12,19 +12,17 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section className="bg-navy-950 pt-32 pb-20 relative overflow-hidden">
-        <div className="gradient-orb w-[400px] h-[400px] bg-accent/10 top-20 right-0 absolute" />
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             className="max-w-3xl"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-accent/10 text-accent mb-4">
+            <span className="inline-block text-xs font-medium tracking-wider uppercase text-accent mb-4">
               About Ligato
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight leading-tight">
               {ABOUT_CONTENT.headline}
             </h1>
             <p className="mt-6 text-lg text-gray-400 leading-relaxed">
@@ -53,7 +51,7 @@ export default function AboutPage() {
             </motion.p>
           ))}
 
-          <motion.div variants={fadeInUp} className="mt-12 p-8 bg-navy-950 rounded-2xl">
+          <motion.div variants={fadeInUp} className="mt-12 p-8 bg-navy-950 rounded-xl">
             <p className="text-xl font-semibold text-white leading-relaxed">
               &ldquo;{ABOUT_CONTENT.mission}&rdquo;
             </p>
@@ -70,7 +68,7 @@ export default function AboutPage() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold text-white mb-4">What Drives Us</h2>
+          <h2 className="text-3xl font-semibold text-white mb-4">What Drives Us</h2>
           <p className="text-gray-400 max-w-xl mx-auto mb-12">
             Built for tradespeople, by people who understand the work.
           </p>
@@ -81,7 +79,7 @@ export default function AboutPage() {
               { title: 'Built for the Trades', desc: 'Every feature is designed for how service businesses actually operate.' },
               { title: 'Always Available', desc: 'Your AI never takes a day off, so you never miss an opportunity.' },
             ].map((value) => (
-              <motion.div key={value.title} variants={fadeInUp} className="glass-card rounded-2xl p-6 text-left">
+              <motion.div key={value.title} variants={fadeInUp} className="surface-card rounded-xl p-6 text-left">
                 <h3 className="text-white font-semibold mb-2">{value.title}</h3>
                 <p className="text-gray-400 text-sm">{value.desc}</p>
               </motion.div>

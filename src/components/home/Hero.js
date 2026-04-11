@@ -20,32 +20,27 @@ export default function Hero() {
         >
           <source src="/video/hero.mp4" type="video/mp4" />
         </video>
-        {/* Dark overlay to keep text readable */}
         <div className="absolute inset-0 bg-navy-950/80" />
       </div>
-
-      {/* Gradient orbs */}
-      <div className="gradient-orb w-[600px] h-[600px] bg-accent/20 -top-40 -right-40 absolute z-[1]" />
-      <div className="gradient-orb w-[400px] h-[400px] bg-teal-500/10 bottom-20 -left-20 absolute z-[1]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
           >
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-accent/10 text-accent mb-6">
+            <span className="inline-block text-xs font-medium tracking-wider uppercase text-accent mb-6">
               {HERO.badge}
             </span>
           </motion.div>
 
           {/* Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.5, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]"
           >
             {HERO.headline}
@@ -53,9 +48,9 @@ export default function Hero() {
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-6 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed"
           >
             {HERO.subheadline}
@@ -63,9 +58,9 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.55 }}
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Button href="/book-a-demo" size="lg">
@@ -78,9 +73,9 @@ export default function Hero() {
 
           {/* Stats bar */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
             className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto"
           >
             {[
@@ -98,7 +93,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-navy-950 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-navy-950 to-transparent" />
     </section>
   );
 }

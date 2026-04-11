@@ -7,7 +7,6 @@ export const NAV_LINKS = [
       { label: 'AI Text/SMS', href: '/ai-text-sms', description: 'Instant intelligent text replies' },
       { label: 'AI Voice/Phone', href: '/ai-voice-phone', description: 'Never miss a call again' },
       { label: 'Pro Website', href: '/websites', description: 'A website built for your trade' },
-      { label: 'Lead Alerts & Follow-Ups', href: '/lead-alerts', description: 'Instant alerts + automated follow-ups' },
     ],
   },
   { label: 'Pricing', href: '/pricing' },
@@ -17,7 +16,7 @@ export const NAV_LINKS = [
 export const HERO = {
   badge: 'AI Receptionist for Home Service Pros',
   headline: 'Stop Losing Jobs to the Guy Who Answers First.',
-  subheadline: 'Ligato AI handles your calls, texts, website chats, and even builds your website. 24/7. One AI brain trained on your business. Every lead captured. Every customer impressed.',
+  subheadline: 'Ligato AI handles your calls, texts, and website chats. We\'ll even build your website. 24/7. One AI brain trained on your business. Every lead captured. Every customer impressed.',
   cta1: 'Book a Demo',
   cta2: 'See How It Works',
 };
@@ -291,36 +290,58 @@ export const WEBSITE_PAGE = {
   ],
 };
 
-// Lead Alerts & Follow-Ups feature page content
-export const ALERTS_PAGE = {
+// Channel-specific alert timelines
+export const CHAT_ALERTS = {
   badge: 'Lead Alerts & Follow-Ups',
-  headline: 'Every Lead Gets Chased Down. Automatically.',
-  subheadline: 'Instant owner alerts the second a lead comes in. Automated follow-ups for leads who don\'t book. Appointment reminders so nobody forgets. You stay in the loop without lifting a finger.',
-  howItWorks: [
-    { step: 1, title: 'Lead Comes In', description: 'A customer calls, texts, or chats. The AI handles the conversation and captures their info.' },
-    { step: 2, title: 'You Get Alerted Instantly', description: 'Within 30 seconds, you get an SMS and email with the lead\'s name, phone, job type, and urgency level.' },
-    { step: 3, title: 'AI Follows Up Automatically', description: 'If the lead doesn\'t book, Ligato sends a follow-up email (and text once approved) 2 hours later.' },
-    { step: 4, title: 'Appointment Reminders Go Out', description: '24 hours before a booked appointment, the customer gets a reminder with the date, time, and business phone number.' },
-    { step: 5, title: 'Track Everything in Your Dashboard', description: 'See pending follow-ups, sent messages, and reminder status in the Follow-Up Center. Nothing falls through the cracks.' },
-  ],
-  sellingPoints: [
-    { title: '30-Second Owner Alerts', description: 'SMS + email the moment a lead is captured. Emergency situations flagged with priority alerts so you can act fast.' },
-    { title: 'Automated Follow-Ups', description: 'Leads who call but don\'t book get a friendly follow-up. No manual effort — the system handles it.' },
-    { title: 'Appointment Reminders', description: 'Customers get a reminder 24 hours before their appointment. Fewer no-shows, less wasted time.' },
-    { title: 'Follow-Up Center Dashboard', description: 'One place to see every pending follow-up, every sent message, and every upcoming reminder.' },
-    { title: 'Email Now, SMS When Ready', description: 'Email follow-ups and reminders work immediately. SMS activates the moment your business texting is approved.' },
-    { title: 'No Leads Left Behind', description: 'The #1 reason small businesses lose jobs: slow follow-up. Ligato makes sure every lead gets chased.' },
+  headline: 'Every Chat Lead Gets Chased Down',
+  description: 'The second a website visitor gives their info through chat, you get notified. If they don\'t book, Ligato follows up automatically. Appointment reminders keep no-shows to a minimum.',
+  timeline: [
+    { type: 'chat', time: '9:42 PM', title: 'New lead via Chat', description: 'Sarah T. — AC not cooling, wants estimate' },
+    { type: 'alert', time: '9:42 PM', title: 'Owner alert sent', description: 'SMS + email to your phone' },
+    { type: 'followup', time: '11:42 PM', title: 'Auto follow-up sent', description: '"Hi Sarah, following up on your AC service inquiry..."' },
+    { type: 'booking', time: 'Next day', title: 'Sarah books appointment', description: 'Wednesday at 2:00 PM' },
+    { type: 'reminder', time: 'Tue 2:00 PM', title: 'Reminder sent to Sarah', description: '"Just a reminder — we\'re coming out tomorrow at 2 PM"' },
   ],
 };
 
-// Alerts mockup conversation for the feature page
-export const ALERTS_TIMELINE = [
-  { type: 'lead', time: '2:14 PM', title: 'New lead via Voice', description: 'Mike Johnson — kitchen faucet repair, Provo UT' },
-  { type: 'alert', time: '2:14 PM', title: 'Owner alert sent', description: 'SMS + email to your phone' },
-  { type: 'followup', time: '4:14 PM', title: 'Auto follow-up sent', description: '"Hi Mike, following up on your faucet repair inquiry..."' },
-  { type: 'booking', time: '4:22 PM', title: 'Mike books appointment', description: 'Tuesday at 9:00 AM' },
-  { type: 'reminder', time: 'Mon 9:00 AM', title: 'Reminder sent to Mike', description: '"Just a reminder — we\'re coming out tomorrow at 9 AM"' },
-];
+export const SMS_ALERTS = {
+  badge: 'Lead Alerts & Follow-Ups',
+  headline: 'Every Text Lead Gets Chased Down',
+  description: 'When a customer texts your business number, you get an instant alert with their info. No response after the conversation? Ligato follows up. Booked appointments get automatic reminders.',
+  timeline: [
+    { type: 'text', time: '3:15 PM', title: 'New lead via SMS', description: 'Dave R. — sprinkler valve repair, Orem UT' },
+    { type: 'alert', time: '3:15 PM', title: 'Owner alert sent', description: 'SMS + email to your phone' },
+    { type: 'followup', time: '5:15 PM', title: 'Auto follow-up sent', description: '"Hi Dave, still need that sprinkler looked at?"' },
+    { type: 'booking', time: '5:28 PM', title: 'Dave books appointment', description: 'Friday at 10:00 AM' },
+    { type: 'reminder', time: 'Thu 10:00 AM', title: 'Reminder sent to Dave', description: '"Just a reminder — we\'re coming out tomorrow at 10 AM"' },
+  ],
+};
+
+export const VOICE_ALERTS = {
+  badge: 'Lead Alerts & Follow-Ups',
+  headline: 'Every Call Lead Gets Chased Down',
+  description: 'Within 30 seconds of a phone lead, you get a text and email with their name, job type, and a link to the full transcript. If they don\'t book, Ligato follows up automatically.',
+  timeline: [
+    { type: 'lead', time: '2:14 PM', title: 'New lead via Voice', description: 'Mike J. — kitchen faucet repair, Provo UT' },
+    { type: 'alert', time: '2:14 PM', title: 'Owner alert sent', description: 'SMS + email with call summary' },
+    { type: 'followup', time: '4:14 PM', title: 'Auto follow-up sent', description: '"Hi Mike, following up on your faucet repair inquiry..."' },
+    { type: 'booking', time: '4:22 PM', title: 'Mike books appointment', description: 'Tuesday at 9:00 AM' },
+    { type: 'reminder', time: 'Mon 9:00 AM', title: 'Reminder sent to Mike', description: '"Just a reminder — we\'re coming out tomorrow at 9 AM"' },
+  ],
+};
+
+export const WEBSITE_ALERTS = {
+  badge: 'Lead Alerts & Follow-Ups',
+  headline: 'Every Website Lead Gets Chased Down',
+  description: 'Your AI chat widget captures the lead, then the alert and follow-up system takes over. You get notified instantly, leads get followed up with automatically, and booked jobs get reminders.',
+  timeline: [
+    { type: 'web', time: '8:31 PM', title: 'New lead via Website', description: 'Lisa M. — water heater replacement quote' },
+    { type: 'alert', time: '8:31 PM', title: 'Owner alert sent', description: 'SMS + email to your phone' },
+    { type: 'followup', time: '10:31 PM', title: 'Auto follow-up sent', description: '"Hi Lisa, following up on your water heater inquiry..."' },
+    { type: 'booking', time: 'Next day', title: 'Lisa books appointment', description: 'Thursday at 11:00 AM' },
+    { type: 'reminder', time: 'Wed 11:00 AM', title: 'Reminder sent to Lisa', description: '"Just a reminder — we\'re coming out tomorrow at 11 AM"' },
+  ],
+};
 
 export const ABOUT_CONTENT = {
   headline: 'Built for the Trades',

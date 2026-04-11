@@ -23,9 +23,9 @@ export default function PricingSnapshot() {
         viewport={{ once: true, amount: 0.3 }}
         className="max-w-lg mx-auto"
       >
-        <div className="bg-navy-950 rounded-3xl p-8 lg:p-10 text-center border border-white/10 shadow-2xl">
+        <div className="bg-navy-950 rounded-xl p-8 lg:p-10 text-center border border-white/[0.06]">
           <div className="mb-6">
-            <span className="text-5xl lg:text-6xl font-bold text-white">{PRICING.price}</span>
+            <span className="text-4xl lg:text-5xl font-semibold text-white">{PRICING.price}</span>
             <span className="text-xl text-gray-400">{PRICING.period}</span>
           </div>
           <p className="text-gray-400 mb-8">{PRICING.tagline}</p>

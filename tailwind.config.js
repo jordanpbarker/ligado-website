@@ -24,19 +24,9 @@ module.exports = {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
-        'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
-        'float': 'float 6s ease-in-out infinite',
         'waveform': 'waveform 1.5s ease-in-out infinite',
       },
       keyframes: {
-        'glow-pulse': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(45, 212, 191, 0.15)' },
-          '50%': { boxShadow: '0 0 40px rgba(45, 212, 191, 0.3)' },
-        },
-        'float': {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
         'waveform': {
           '0%, 100%': { height: '12px' },
           '50%': { height: '32px' },

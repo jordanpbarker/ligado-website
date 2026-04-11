@@ -22,7 +22,7 @@ export default function PricingPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight">
               Simple Pricing. No Surprises.
             </h1>
             <p className="mt-4 text-lg text-gray-400 max-w-xl mx-auto">
@@ -41,7 +41,7 @@ export default function PricingPage() {
           viewport={{ once: true }}
           className="max-w-lg mx-auto -mt-8"
         >
-          <div className="bg-white rounded-3xl p-8 lg:p-10 border border-gray-200 shadow-xl relative overflow-hidden">
+          <div className="bg-white rounded-xl p-8 lg:p-10 border border-gray-200 relative overflow-hidden">
             {/* Accent top border */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-accent" />
 

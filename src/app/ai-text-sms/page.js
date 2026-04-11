@@ -1,8 +1,9 @@
-import { SMS_PAGE } from '@/lib/constants';
+import { SMS_PAGE, SMS_ALERTS } from '@/lib/constants';
 import FeatureHero from '@/components/features/FeatureHero';
 import SmsMockup from '@/components/features/SmsMockup';
 import HowItWorks from '@/components/features/HowItWorks';
 import SellingPoints from '@/components/features/SellingPoints';
+import AlertsMockup from '@/components/features/AlertsMockup';
 import FinalCTA from '@/components/home/FinalCTA';
 
 export const metadata = {
@@ -21,6 +22,12 @@ export default function AiTextSmsPage() {
       <SmsMockup />
       <HowItWorks steps={SMS_PAGE.howItWorks} />
       <SellingPoints points={SMS_PAGE.sellingPoints} />
+      <AlertsMockup
+        badge={SMS_ALERTS.badge}
+        headline={SMS_ALERTS.headline}
+        description={SMS_ALERTS.description}
+        timeline={SMS_ALERTS.timeline}
+      />
       <FinalCTA />
     </>
   );

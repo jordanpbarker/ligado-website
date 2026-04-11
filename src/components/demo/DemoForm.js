@@ -50,10 +50,10 @@ export default function DemoForm() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-accent/10 text-accent mb-4">
+            <span className="inline-block text-xs font-medium tracking-wider uppercase text-accent mb-4">
               Get Started
             </span>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl font-semibold text-white tracking-tight leading-tight">
               See Ligato AI in Action
             </h1>
             <p className="mt-4 text-lg text-gray-400 leading-relaxed">
@@ -202,7 +202,7 @@ export default function DemoForm() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full mt-6 bg-accent text-navy-950 font-semibold py-3.5 rounded-xl hover:bg-accent-hover transition-colors shadow-lg shadow-accent/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full mt-6 bg-accent text-navy-950 font-semibold py-3.5 rounded-lg hover:bg-accent-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {submitting ? 'Sending...' : 'Book My Demo'}
                 </button>
