@@ -71,8 +71,8 @@ export default function Hero() {
             <Button href="/book-a-demo" size="lg">
               {HERO.cta1}
             </Button>
-            <Button href="#channels" variant="outline" size="lg">
-              {HERO.cta2}
+            <Button href="#live-demo" variant="outline" size="lg">
+              Try It Live
             </Button>
           </motion.div>
 
